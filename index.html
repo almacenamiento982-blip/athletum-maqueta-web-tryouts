@@ -1,32 +1,22 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Maqueta Tryouts Athletum</title>
+<title>Athletum FC Tryouts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--amarillo:#FFF200;--negro:#0b0b0b;--gris:#1a1a1a;--nota:#fff8c4;--nota-borde:#c9b200;--nota-txt:#4d4300;--ok:#1f7a3a}
+:root{--amarillo:#FFF200;--negro:#0b0b0b;--gris:#1a1a1a}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--negro);color:#fff;font:15px/1.55 Montserrat,system-ui,sans-serif}
 img{max-width:100%;display:block}
 a{color:inherit}
 h1,h2,h3{font-family:Oswald,Impact,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.01em;line-height:1.1}
 
-/* ---------- barra de revisión (no es parte de la web) ---------- */
-.rev{position:sticky;top:0;z-index:50;background:#fffdf0;color:#2b2600;border-bottom:2px solid var(--nota-borde);font:500 13px/1.4 Montserrat,sans-serif}
-.rev .in{max-width:1200px;margin:0 auto;padding:9px 16px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
-.rev b{font-weight:700}
-.rev .ctl{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.rev button,.rev a.b{font:600 12.5px Montserrat,sans-serif;border:1px solid #d8cf8a;background:#fff;color:#2b2600;border-radius:6px;padding:6px 10px;cursor:pointer;text-decoration:none}
-.rev button[aria-pressed="true"]{background:#2b2600;color:#fff200;border-color:#2b2600}
-.rev button:focus-visible,.rev a.b:focus-visible{outline:2px solid #2b2600;outline-offset:2px}
-
-/* ---------- maqueta de la web ---------- */
 .m{max-width:1200px;margin:0 auto;background:var(--negro)}
 .cab{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-bottom:1px solid #222}
 .cab img{height:54px;width:auto}
@@ -36,6 +26,7 @@ h1,h2,h3{font-family:Oswald,Impact,sans-serif;font-weight:700;text-transform:upp
 .btn{display:inline-block;background:var(--amarillo);color:#000;font:700 15px Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:15px 26px;border-radius:4px;border:0;cursor:pointer}
 .btn.chico{padding:10px 16px;font-size:12.5px}
 .btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+
 .hero{display:grid;grid-template-columns:1fr;align-items:center}
 @media(min-width:900px){.hero{grid-template-columns:1fr 1fr}}
 .hero .txt{padding:40px 24px}
@@ -43,14 +34,16 @@ h1,h2,h3{font-family:Oswald,Impact,sans-serif;font-weight:700;text-transform:upp
 .hero h1 em{font-style:normal;color:var(--amarillo);display:block;font-size:.55em;margin-top:8px}
 .hero p{color:#cfcfcf;max-width:460px;margin:14px 0 24px}
 .hero .fino{font-size:12.5px;color:#9a9a9a;margin-top:12px}
-.hero > img{width:100%;height:100%;object-fit:cover;max-height:680px}
+.hero > img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
 .afil{display:flex;gap:18px;align-items:center;margin-top:26px}
 .afil img{height:42px;width:auto}
+
 .cifras{display:grid;grid-template-columns:repeat(2,1fr);background:var(--amarillo);color:#000}
 @media(min-width:900px){.cifras{grid-template-columns:repeat(4,1fr)}}
 .cifras div{padding:22px 18px;border-right:1px solid rgba(0,0,0,.12);border-bottom:1px solid rgba(0,0,0,.12)}
 .cifras b{display:block;font:700 36px Oswald,sans-serif;line-height:1}
 .cifras span{font-size:12.5px;font-weight:600}
+
 section{padding:52px 24px}
 section h2{font-size:clamp(30px,4.6vw,46px);margin:0 0 10px}
 section h2 em{font-style:normal;color:var(--amarillo)}
@@ -58,9 +51,13 @@ section h2 em{font-style:normal;color:var(--amarillo)}
 .claro{background:#fff;color:#111}
 .claro .sub{color:#555}
 .claro h2 em{color:#111;background:var(--amarillo);padding:0 6px}
-.pathway{display:grid;gap:28px;align-items:center}
-@media(min-width:900px){.pathway{grid-template-columns:.9fr 1.1fr}}
-.pathway img{border-radius:8px}
+
+.dos{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.dos{grid-template-columns:.85fr 1.15fr}}
+.foto{border-radius:8px;overflow:hidden;aspect-ratio:4/5}
+.foto img{width:100%;height:100%;object-fit:cover}
+@media(max-width:899px){.dos .foto{max-width:420px;width:100%;margin:0 auto}}
+
 .pasos{list-style:none;padding:0;margin:0;display:grid;gap:10px;counter-reset:p}
 .pasos li{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;background:var(--gris);border-radius:8px;padding:14px}
 .claro .pasos li{background:#f3f3f3}
@@ -70,6 +67,14 @@ section h2 em{font-style:normal;color:var(--amarillo)}
 .claro .pasos span{color:#555}
 .logos-fila{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:8px}
 .logos-fila img{height:28px;width:auto;background:#fff;border-radius:4px;padding:2px 4px}
+.btn-ig{display:block;width:max-content;max-width:100%;margin:22px auto 0;text-align:center;background:linear-gradient(90deg,#833ab4,#e1306c,#f77737);color:#fff}
+
+.galeria{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(210px,26%);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
+@media(max-width:899px){.galeria{grid-auto-columns:68%}}
+.galeria figure{margin:0;scroll-snap-align:start;border-radius:8px;overflow:hidden;aspect-ratio:4/5;background:#111}
+.galeria img{width:100%;height:100%;object-fit:cover}
+.galeria:focus-visible{outline:2px solid var(--amarillo);outline-offset:4px}
+
 .fecha{border:2px solid var(--amarillo);border-radius:10px;padding:26px 20px;text-align:center;max-width:680px;margin:0 auto}
 .fecha h3{font-size:clamp(26px,4vw,36px);margin:0;color:var(--amarillo)}
 .fecha p{margin:10px 0 20px;color:#ddd}
@@ -87,7 +92,7 @@ section h2 em{font-style:normal;color:var(--amarillo)}
 details{background:var(--gris);border-radius:8px;padding:14px 16px;margin-bottom:8px;max-width:820px}
 summary{cursor:pointer;font-weight:700}
 details p{margin:10px 0 0;color:#cfcfcf;font-size:14px}
-.sponsors{display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:center;background:#fff;border:1px solid #e2e2e2;border-radius:8px;padding:24px}
+.sponsors{display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:center;background:var(--gris);border:1px solid #2a2a2a;border-radius:8px;padding:24px}
 .sponsors img{height:110px;width:auto}
 .final{text-align:center;background:var(--amarillo);color:#000}
 .final h2 em{color:#000;text-decoration:underline}
@@ -95,65 +100,15 @@ details p{margin:10px 0 0;color:#cfcfcf;font-size:14px}
 .pie{padding:24px;font-size:12.5px;color:#9a9a9a;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;border-top:1px solid #222}
 .fija{position:sticky;bottom:0;background:rgba(11,11,11,.96);padding:10px 16px;display:flex;justify-content:center;border-top:1px solid #333;z-index:20}
 .fija .btn{width:100%;text-align:center}
-.btn-ig{display:block;width:max-content;max-width:100%;margin:22px auto 0;text-align:center;background:linear-gradient(90deg,#833ab4,#e1306c,#f77737);color:#fff}
 @media(min-width:900px){.fija{display:none}}
-
-/* ---------- notas de revisión ---------- */
-.nota{display:block;background:var(--nota);color:var(--nota-txt);border:1px dashed var(--nota-borde);border-radius:8px;font:500 13px/1.5 Montserrat,sans-serif;padding:10px 12px;margin:16px 0 0;text-transform:none;letter-spacing:0;text-align:left}
-.nota b{color:var(--nota-txt)}
-.nota .num{display:inline-block;background:var(--nota-txt);color:var(--nota);font-weight:700;border-radius:4px;padding:0 6px;margin-right:6px}
-.nota ul{margin:6px 0 0;padding-left:18px}
-.nota .acc{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
-.nota button{font:600 12.5px Montserrat,sans-serif;border:1px solid #d8cf8a;background:#fff;color:#2b2600;border-radius:6px;padding:6px 10px;cursor:pointer}
-.nota button.si{background:var(--ok);border-color:var(--ok);color:#fff}
-.nota button:focus-visible{outline:2px solid #2b2600;outline-offset:2px}
-.nota textarea{width:100%;font:13px Montserrat,sans-serif;border:1px solid #d8cf8a;border-radius:6px;padding:8px;margin-top:8px;resize:vertical}
-.nota .est{font-weight:700;color:var(--ok)}
-.nota.hecho{border-style:solid;border-color:var(--ok)}
-html[data-l="en"] .es,html:not([data-l="en"]) .en{display:none!important}
-.nota>div.es,.nota>div.en{display:inline}
-body.sin-notas .nota{display:none}
-.solo-rev{display:none}body.sin-notas .solo-rev{display:block}
-
-/* ---------- panel final de revisión ---------- */
-.panel{background:#fffdf0;color:#2b2600;padding:40px 16px 70px}
-.panel .in{max-width:860px;margin:0 auto}
-.panel h2{color:#2b2600;font-size:28px;margin:0 0 8px}
-.panel p{margin:0 0 14px}
-.panel ol{padding-left:20px}
-.panel li{margin:6px 0}
-.panel .preg{background:#fff;border:1px solid #e6dca0;border-radius:10px;padding:14px;margin:12px 0}
-.panel .preg label{display:block;font-weight:700;margin-bottom:6px}
-.panel .preg .ctx{font-size:12.5px;color:#6b6230;margin:0 0 8px}
-.panel textarea{width:100%;font:14px Montserrat,sans-serif;border:1px solid #d8cf8a;border-radius:6px;padding:8px;resize:vertical}
-.panel button{font:700 13px Montserrat,sans-serif;border:1px solid #2b2600;background:#2b2600;color:#fff200;border-radius:6px;padding:9px 14px;cursor:pointer;margin-top:8px}
-.panel button.sec{background:#fff;color:#2b2600}
-.panel button:focus-visible{outline:2px solid #2b2600;outline-offset:2px}
-.panel .est{font-weight:700;color:var(--ok);margin-left:8px}
-.panel .grande{font-size:15px;padding:12px 18px}
 </style>
 </head>
 <body>
-
-<div class="rev" role="region" aria-label="Barra de revisión">
-  <div class="in">
-    <span><span class="es"><b>Maqueta para revisión · athletumfc.com/tryouts</b> — no es la página oficial. Las notas amarillas explican cada cambio y no van en la web.</span><span class="en"><b>Mockup for review · athletumfc.com/tryouts</b> — this is not the live page. The yellow notes explain each change and are not part of the website.</span></span>
-    <span class="ctl">
-      <button type="button" id="b-lang">EN</button>
-      <button type="button" id="b-notas" aria-pressed="true">Notas visibles</button>
-      <span>Pathway:</span>
-      <button type="button" class="b-pw" data-pw="a" aria-pressed="true"><span class="es">Opción A</span><span class="en">Option A</span></button>
-      <button type="button" class="b-pw" data-pw="b" aria-pressed="false"><span class="es">Opción B</span><span class="en">Option B</span></button>
-      <a class="b" href="#revision"><span class="es">Ir a la revisión</span><span class="en">Go to review</span></a>
-    </span>
-  </div>
-</div>
-
 <main class="m">
 
   <div class="cab">
     <img src="assets/logo_athletum.webp" alt="Athletum FC" width="178" height="300">
-    <nav aria-label="Menú (maqueta)"><span>HOME</span><span>PROGRAMS</span><span>MLS NEXT</span><span class="act">TRYOUTS</span><span>CONTACT</span></nav>
+    <nav aria-label="Main menu"><span>HOME</span><span>PROGRAMS</span><span>MLS NEXT</span><span class="act">TRYOUTS</span><span>CONTACT</span></nav>
     <a class="btn chico" href="#apply">Apply</a>
   </div>
 
@@ -164,15 +119,8 @@ body.sin-notas .nota{display:none}
       <a class="btn" id="apply" href="#apply">Apply for a tryout</a>
       <div class="fino">Registration on PlayMetrics</div>
       <div class="afil"><img src="assets/logo_jam.webp" alt="Juventus Academy Miami" width="593" height="300"><img src="assets/logo_mlsnext.webp" alt="MLS NEXT" width="208" height="164"></div>
-      <div class="nota" data-k="hero"><span class="num">1</span><div class="es"><b>Arriba de la página.</b>
-        <ul>
-          <li>Hoy hay 11 botones con dos textos ("Apply now" y "Register now") y colores celestes. Queda <b>un solo botón amarillo, "Apply for a tryout"</b>, arriba, después de las fechas, al final y fijo abajo en el celular. Todos llevan al mismo registro de PlayMetrics.</li>
-          <li><b>Actualizado 12-11:</b> la imagen es el post de lanzamiento de @athletum_fc ("Your next level starts here"), con tres jugadores reales del Media Day y la camiseta 2026-27. Así la web y el Instagram nuevo dicen lo mismo.</li>
-          <li>Si el registro al tryout es gratis, se propone decirlo aquí ("Apply for a free tryout").</li>
-        </ul>
-      </div><div class="en"><b>Top of the page.</b><ul><li>Today there are 11 buttons with two labels ("Apply now" and "Register now") in light blue. There will be <b>a single yellow button, "Apply for a tryout"</b>: at the top, after the dates, at the end and fixed at the bottom on mobile. All of them go to the same PlayMetrics registration.</li><li><b>Updated Nov 12:</b> the image is the launch post of @athletum_fc ("Your next level starts here"), with three real players from Media Day in the 2026-27 kit. This way the website and the new Instagram say the same thing.</li><li>If the tryout registration is free, the proposal is to say so here ("Apply for a free tryout").</li></ul></div></div>
     </div>
-    <img src="assets/hero.webp?v=1211" alt="Three Athletum players in the 2026-27 white and gold kit: Your next level starts here" width="720" height="900" fetchpriority="high">
+    <img src="assets/hero.webp?v=1212" alt="Three Athletum players in the 2026-27 white and gold kit: Your next level starts here" width="800" height="1000" fetchpriority="high">
   </div>
 
   <div class="cifras" id="s-cifras">
@@ -181,13 +129,12 @@ body.sin-notas .nota{display:none}
     <div><b>Top 8</b><span>nationally, two seasons in a row</span></div>
     <div><b>6</b><span>players signed by pro academies in 2026</span></div>
   </div>
-  <div style="padding:0 24px"><div class="nota" data-k="cifras"><span class="num">2</span><div class="es"><b>Franja de datos (nueva).</b> Es el gráfico de datos que se habló en la reunión. Solo usa cifras con fuente pública; "60+ partidos por temporada" y los exalumnos en college no van hasta que se confirmen. Hay que validar las cuatro.</div><div class="en"><b>Stats strip (new).</b> This is the data graphic discussed in the meeting. It only uses figures with a public source; "60+ games per season" and alumni in college are left out until they are confirmed. All four need to be validated.</div></div></div>
 
   <section id="s-pathway">
     <h2>One club. <em>The whole pathway.</em></h2>
     <p class="sub">From the Pre-Academy to MLS NEXT, and then on to college or the pros. Every player is placed at the level that fits them after the tryout.</p>
-    <div class="pathway">
-      <img id="img-pw" src="assets/pathway_a.webp?v=1211" alt="Athletum pathway: Pre-Academy, Competitive, MLS NEXT, College and Pro" width="720" height="900" loading="lazy">
+    <div class="dos">
+      <div class="foto"><img src="assets/md_01784.webp?v=1212" alt="Athletum player in the 2026-27 kit pointing at the camera with a ball under his arm" width="640" height="800" loading="lazy"></div>
       <ol class="pasos">
         <li><div><b>Pre-Academy</b><span>Juventus Academy Miami methodology for the youngest players.</span></div></li>
         <li><div><b>Competitive</b><span>League play in EDP Florida, Florida Academy League, South Florida Premier League and National Academy League.</span>
@@ -197,18 +144,33 @@ body.sin-notas .nota{display:none}
         <li><div><b>College · Pro</b><span>College soccer (NCAA, NJCAA, NAIA) and pro or semi-pro soccer around the world.</span></div></li>
       </ol>
     </div>
-    <div class="nota" data-k="pathway"><span class="num">3</span><div class="es"><b>Pathway (nuevo).</b> Explica el camino completo del club. Con los botones "Opción A / Opción B" de la barra de arriba se ven las dos versiones de la imagen (escalera o arco, siguiendo el dibujo enviado); la que se elija va también en la pauta. Los pasos de la lista son los mismos de la imagen, con Juventus Residency al nivel de MLS NEXT. Falta confirmar cómo describir MLS NEXT Pro y Residency. UPSL no aparece porque es de adultos. <b>Actualizado 12-11:</b> en las dos opciones el jugador es ahora una foto real del Media Day 2026-27; la persona no está retocada con inteligencia artificial.</div><div class="en"><b>Pathway (new).</b> Shows the club's full pathway. The "Option A / Option B" buttons in the top bar switch between the two versions of the image (stairs or arch, following the drawing that was sent); the one chosen will also be used in the ads. The steps in the list match the image, with Juventus Residency at the MLS NEXT level. Still to confirm: how to describe MLS NEXT Pro and Residency. UPSL is not shown because it is an adult league. <b>Updated Nov 12:</b> in both options the player is now a real photo from the 2026-27 Media Day; the person is not retouched with artificial intelligence.</div></div>
   </section>
 
   <section class="claro" id="s-como">
-    <h2>How it <em>works</em></h2>
-    <ol class="pasos">
-      <li><div><b>Apply</b><span>Create your PlayMetrics account and register for the tryout.</span></div></li>
-      <li><div><b>Get your date</b><span>You will receive a confirmation email with your age group's date, time and location.</span></div></li>
-      <li><div><b>Receive your invitation</b><span>After the tryout, allow a few days to a week to receive your invitation letter.</span></div></li>
-    </ol>
+    <div class="dos">
+      <div class="foto"><img src="assets/md_02089.webp?v=1212" alt="Athletum player in profile holding a ball" width="640" height="800" loading="lazy"></div>
+      <div>
+        <h2>How it <em>works</em></h2>
+        <ol class="pasos">
+          <li><div><b>Apply</b><span>Create your PlayMetrics account and register for the tryout.</span></div></li>
+          <li><div><b>Get your date</b><span>You will receive a confirmation email with your age group's date, time and location.</span></div></li>
+          <li><div><b>Receive your invitation</b><span>After the tryout, allow a few days to a week to receive your invitation letter.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="s-jugadores">
+    <h2>This is <em>Athletum</em></h2>
+    <p class="sub">Our players in the 2026-27 kit.</p>
+    <div class="galeria" tabindex="0" aria-label="Athletum players photo gallery, scroll sideways">
+      <figure><img src="assets/md_01284.webp?v=1212" alt="Athletum player pointing at the camera" width="640" height="800" loading="lazy"></figure>
+      <figure><img src="assets/md_01480.webp?v=1212" alt="Athletum player seated with a ball" width="640" height="800" loading="lazy"></figure>
+      <figure><img src="assets/md_01633.webp?v=1212" alt="Athletum goalkeeper holding a ball" width="640" height="800" loading="lazy"></figure>
+      <figure><img src="assets/md_03267.webp?v=1212" alt="Athletum player standing in the 2026-27 kit" width="640" height="800" loading="lazy"></figure>
+      <figure><img src="assets/md_01422.webp?v=1212" alt="Athletum player seated holding a ball" width="640" height="800" loading="lazy"></figure>
+    </div>
     <a class="btn btn-ig" href="https://www.instagram.com/athletum_fc/" target="_blank" rel="noopener">Follow us on Instagram · @athletum_fc</a>
-    <div class="nota" data-k="como"><span class="num">4</span><div class="es"><b>Cómo funciona.</b> Son los mismos 3 pasos de la página actual, con textos más cortos. <b>Actualizado 12-11:</b> vuelve "Follow us on Instagram" con la cuenta nueva, @athletum_fc, como botón visible también en el celular. Hoy, en la web en vivo, el ícono de Instagram de la cabecera no se ve en el celular, y mostrarlo ahí descuadra la cabecera; por eso se propone este botón.</div><div class="en"><b>How it works.</b> Same 3 steps as the current page, with shorter text. <b>Updated Nov 12:</b> "Follow us on Instagram" comes back with the new account, @athletum_fc, as a button that is also visible on mobile. Today, on the live website, the Instagram icon in the header is not shown on mobile, and showing it there breaks the header layout; that is why this button is proposed.</div></div>
   </section>
 
   <section id="s-fechas">
@@ -221,7 +183,6 @@ body.sin-notas .nota{display:none}
         <tr><td>To be confirmed</td><td>To be confirmed</td><td>To be confirmed</td></tr>
       </table></div>
     </div>
-    <div class="nota" data-k="fechas"><span class="num">5</span><div class="es"><b>Fechas.</b> Se quitan todos los horarios de mayo de 2026 (Cutler Bay, Palmetto Bay, Mater Bay, Goulds Park y los bloques ocultos de Doral y Davie), que hoy ocupan casi toda la página y en el bloque de niños casi no se leen. Cuando el club confirme el calendario 2027 se llena esta única tabla (categoría, sede, fecha y hora).</div><div class="en"><b>Dates.</b> All the May 2026 schedules are removed (Cutler Bay, Palmetto Bay, Mater Bay, Goulds Park and the hidden Doral and Davie blocks). Today they take up almost the whole page, and in the boys' block they are barely readable. Once the club confirms the 2027 calendar, this single table is filled in (age group, location, date and time).</div></div>
   </section>
 
   <section class="claro" id="s-sedes">
@@ -234,17 +195,20 @@ body.sin-notas .nota{display:none}
       <div class="sede"><b>Davie</b><span>David Posnack JCC · 5850 S Pine Island Rd, Davie, FL 33328</span></div>
       <div class="sede"><b>Fontainebleau</b><span>Ruben Dario Park</span></div>
     </div>
-    <div class="nota" data-k="sedes"><span class="num">6</span><div class="es"><b>Sedes.</b> Quedan las 6 sedes; <b>Palmetto Bay y Coral Gables salen</b>, como se pidió el 14-10. Falta confirmar la dirección completa de Ruben Dario Park y el código postal de Dorsey Park. Van sin foto para que la página cargue rápido.</div><div class="en"><b>Locations.</b> The 6 locations stay; <b>Palmetto Bay and Coral Gables are removed</b>, as requested on Oct 14. Still to confirm: the full address of Ruben Dario Park and the ZIP code of Dorsey Park. No photos, so the page loads fast.</div></div>
   </section>
 
   <section id="s-tener">
-    <h2>Please <em>keep in mind</em></h2>
-    <ul class="tener">
-      <li>Players must wear a white or black jersey on the day of the tryout.</li>
-      <li>Arrive 30 minutes early to check in. Bibs with numbers will be provided.</li>
-      <li>To secure a spot for next season, register and pay as soon as possible after receiving your invitation.</li>
-    </ul>
-    <div class="nota" data-k="tener"><span class="num">7</span><div class="es"><b>A tener en cuenta.</b> Mismo contenido de hoy, sin la frase "Arrive 30 minutes before the tryout…", que estaba repetida.</div><div class="en"><b>Keep in mind.</b> Same content as today, without the sentence "Arrive 30 minutes before the tryout…", which was repeated.</div></div>
+    <div class="dos">
+      <div class="foto"><img src="assets/md_01792.webp?v=1212" alt="Athletum player seated with a ball" width="640" height="800" loading="lazy"></div>
+      <div>
+        <h2>Please <em>keep in mind</em></h2>
+        <ul class="tener">
+          <li>Players must wear a white or black jersey on the day of the tryout.</li>
+          <li>Arrive 30 minutes early to check in. Bibs with numbers will be provided.</li>
+          <li>To secure a spot for next season, register and pay as soon as possible after receiving your invitation.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="s-faq">
@@ -254,13 +218,11 @@ body.sin-notas .nota{display:none}
     <details><summary>What should my child bring?</summary><p>A white or black jersey, cleats, shin guards and water. Please arrive 30 minutes early to check in.</p></details>
     <details><summary>What happens after the tryout?</summary><p>You will receive an invitation letter within a few days to a week with the team and level for your player.</p></details>
     <details><summary>Is Athletum part of Juventus Academy Miami?</summary><p>Athletum FC is the competitive and MLS NEXT program of the Juventus Academy Miami family.</p></details>
-    <div class="nota" data-k="faq"><span class="num">8</span><div class="es"><b>Preguntas frecuentes (nuevo).</b> Las respuestas 1, 2 y 4 salen de la página actual. "Cleats, shin guards and water" y la respuesta 5 son textos nuevos que hay que validar. También se reemplazan dos frases de la página actual: "for over 15 years" (Athletum empezó en 2023; los 15 años son de Juventus Academy Miami) y "one of the most prestigious soccer academies in the world" (puede leerse como si Athletum fuera la academia de Juventus).</div><div class="en"><b>FAQ (new).</b> Answers 1, 2 and 4 come from the current page. "Cleats, shin guards and water" and answer 5 are new and need to be validated. Two sentences of the current page are also replaced: "for over 15 years" (Athletum started in 2023; the 15 years belong to Juventus Academy Miami) and "one of the most prestigious soccer academies in the world" (it can read as if Athletum were the Juventus academy).</div></div>
   </section>
 
-  <section class="claro" id="s-partners" style="text-align:center">
+  <section id="s-partners" style="text-align:center">
     <h2>Our partners</h2>
     <div class="sponsors"><img src="assets/sp_westime.webp" alt="Westime" width="160" height="160"></div>
-    <div class="nota" data-k="partners"><span class="num">9</span><div class="es"><b>Sponsors.</b> Westime es el sponsor de 2026-27 y hoy no aparece. <b>Spinex sale</b>, como se pidió el 14-10. Falta decir cuáles de los de 2022 siguen: Pura Vida Miami, Mia Cucina, St. Regis e IMECA. Esta sección del pie es la misma en todas las páginas del sitio, así que el cambio se ve en toda la web.</div><div class="en"><b>Sponsors.</b> Westime is the 2026-27 sponsor and does not appear today. <b>Spinex is removed</b>, as requested on Oct 14. Still to confirm which 2022 sponsors remain: Pura Vida Miami, Mia Cucina, St. Regis and IMECA. This footer section is shared by every page of the site, so the change applies to the whole website.</div></div>
   </section>
 
   <section class="final" id="s-final">
@@ -272,130 +234,13 @@ body.sin-notas .nota{display:none}
   <div class="pie">
     <span>© 2026 Athletum FC</span>
     <span>(786) 459-3464 · info@athletumfc.com</span>
-    <span>Instagram @athletum_fc · TikTok · YouTube</span>
+    <span><a href="https://www.instagram.com/athletum_fc/" target="_blank" rel="noopener">Instagram @athletum_fc</a> · TikTok · YouTube</span>
   </div>
-  <div style="padding:0 24px 24px"><div class="nota" data-k="general"><span class="num">10</span><div class="es"><b>Lo que no se ve en la maqueta.</b>
-    <ul>
-      <li>Menú: "MSL NEXT ID CAMP" se corrige a <b>"MLS NEXT"</b>.</li>
-      <li>Pie: los logos de EDP Florida y South Florida Premier League van a sus propias webs (hoy van a floridaacademyleague.com), y el enlace de Instagram pasa a la cuenta nueva (<b>esto ya se hizo en la web en vivo el 12-11</b>).</li>
-      <li>Velocidad: hoy la imagen principal tarda 6,9 s en verse en el celular. Se quitan los bloques ocultos y las imágenes pesadas; la meta es menos de 2,5 s.</li>
-      <li>Medición: píxel de Meta en el botón y enlaces con origen, para saber cuántos registros vienen de la pauta, de la bio y de la web.</li>
-    </ul>
-  </div><div class="en"><b>What the mockup does not show.</b><ul><li>Menu: "MSL NEXT ID CAMP" is corrected to <b>"MLS NEXT"</b>.</li><li>Footer: the EDP Florida and South Florida Premier League logos link to their own websites (today they go to floridaacademyleague.com), and the Instagram link goes to the new account (<b>already done on the live website on Nov 12</b>).</li><li>Speed: today the main image takes 6.9 s to appear on mobile. Hidden blocks and heavy images are removed; the goal is under 2.5 s.</li><li>Tracking: Meta pixel on the button and tagged links, to know how many registrations come from the ads, the Instagram bio and the website.</li></ul></div></div></div>
 
   <div class="fija"><a class="btn" href="#apply">Apply for a tryout</a></div>
 </main>
-
-<div class="panel" id="revision">
-  <div class="in">
-    <h2><span class="es">Revisión</span><span class="en">Review</span></h2>
-    <p><span class="es">En cada nota amarilla se puede marcar <b>"De acuerdo"</b> o <b>dejar un comentario</b>. Abajo están las preguntas que faltan para terminar la página. Cada respuesta se guarda al tocar "Enviar".</span><span class="en">On each yellow note you can tap <b>"Agree"</b> or <b>leave a comment</b>. Below are the questions still needed to finish the page. Each answer is saved when you tap "Send".</span></p>
-    <p class="solo-rev" style="font-size:13px"><span class="es">Las notas están ocultas. Para revisar sección por sección, tocar "Notas ocultas" en la barra de arriba.</span><span class="en">The notes are hidden. To review section by section, tap "Notes hidden" in the top bar.</span></p>
-
-    <h2 style="font-size:22px;margin-top:26px"><span class="es">Preguntas</span><span class="en">Questions</span></h2>
-    <div id="preguntas"></div>
-
-    <h2 style="font-size:22px;margin-top:26px"><span class="es">Visto bueno general</span><span class="en">Overall approval</span></h2>
-    <div class="preg">
-      <label for="t-general"><span class="es">¿Se aprueba la maqueta para pasarla a la web oficial cuando estén las fotos nuevas y las respuestas?</span><span class="en">Is the mockup approved, to be moved to the live website once the new photos and the answers are in?</span></label>
-      <textarea id="t-general" rows="2" data-ph-es="Comentario (opcional)" data-ph-en="Comment (optional)" placeholder="Comentario (opcional)"></textarea>
-      <button type="button" class="grande" id="b-aprobar"><span class="es">Aprobar la maqueta</span><span class="en">Approve the mockup</span></button>
-      <button type="button" class="sec grande" id="b-cambios"><span class="es">Pedir cambios</span><span class="en">Request changes</span></button>
-      <span class="est" id="e-general" role="status"></span>
-    </div>
-  </div>
-</div>
-
 <script>
-const FORM='https://docs.google.com/forms/d/e/1FAIpQLSeGUY8Cv9Ea08X9HkdznY9pzVoUc4Gj-GdymsVTFP86wbE5sw/formResponse';
-const ENTRY={pieza:333677581,cuenta:724853821,autor:299801437,comentario:1175231019,copy_corregido:1649408514,copy_original:1637675582,enviado:909195940,tipo:1605073129,zona:1831673234,fila:1327618412};
-const CUENTA='athletum_web_tryouts', LSK='ath_maqueta_web_v1', LSL='ath_maqueta_lang';
-const LS={get(){try{return JSON.parse(localStorage.getItem(LSK)||'{}')}catch(e){return {}}},set(v){try{localStorage.setItem(LSK,JSON.stringify(v))}catch(e){}}};
-
-// ---- idioma / language ----
-const T={
-  es:{agree:'De acuerdo',comment:'Dejar un comentario',sendc:'Enviar comentario',send:'Enviar',sending:'Enviando…',fail:'No se pudo enviar; probar de nuevo',
-      okAgree:'✓ De acuerdo',okComment:'✓ Comentario enviado',okSent:'✓ Enviado',okApproved:'✓ Maqueta aprobada',okChanges:'✓ Cambios pedidos',
-      notesOn:'Notas visibles',notesOff:'Notas ocultas',writeChanges:'Escribir qué cambiar',aria:'Comentario sobre esta sección',btnLang:'EN',loc:'es'},
-  en:{agree:'Agree',comment:'Leave a comment',sendc:'Send comment',send:'Send',sending:'Sending…',fail:'Could not send; please try again',
-      okAgree:'✓ Agreed',okComment:'✓ Comment sent',okSent:'✓ Sent',okApproved:'✓ Mockup approved',okChanges:'✓ Changes requested',
-      notesOn:'Notes visible',notesOff:'Notes hidden',writeChanges:'Write what to change',aria:'Comment on this section',btnLang:'ES',loc:'en'}};
-let L=(()=>{try{return localStorage.getItem(LSL)==='en'?'en':'es'}catch(e){return 'es'}})();
-const tr=k=>T[L][k];
-const hora=iso=>{try{return new Date(iso).toLocaleString(tr('loc'),{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}catch(e){return ''}};
-const pintores=[];
-
-async function enviar(pieza,tipo,comentario){
-  const f=new URLSearchParams(), reg={pieza,cuenta:CUENTA,autor:'Alessandro',tipo,comentario:comentario||'',copy_original:'',copy_corregido:'',enviado:new Date().toISOString(),zona:'',fila:''};
-  for(const k in ENTRY)f.append('entry.'+ENTRY[k],reg[k]??'');
-  try{await fetch(FORM,{method:'POST',mode:'no-cors',body:f});const s=LS.get();s[pieza]={tipo,comentario,hora:reg.enviado};LS.set(s);return true}catch(e){return false}}
-
-// controles dentro de cada nota
-document.querySelectorAll('.nota[data-k]').forEach(n=>{
-  const k=n.dataset.k, acc=document.createElement('div'); acc.className='acc';
-  acc.innerHTML='<button type="button" class="si"></button><button type="button" class="com"></button><span class="est" role="status"></span>'+
-    '<div class="caja" hidden style="width:100%"><textarea rows="2"></textarea><button type="button" class="env"></button></div>';
-  n.appendChild(acc);
-  const est=acc.querySelector('.est'), caja=acc.querySelector('.caja'), ta=caja.querySelector('textarea');
-  const pintar=()=>{acc.querySelector('.si').textContent=tr('agree');acc.querySelector('.com').textContent=tr('comment');caja.querySelector('.env').textContent=tr('sendc');ta.setAttribute('aria-label',tr('aria'));
-    const r=LS.get()['sec_'+k];if(r){n.classList.add('hecho');est.textContent=(r.tipo==='aprobado'?tr('okAgree'):tr('okComment'))+' · '+hora(r.hora)}};
-  pintores.push(pintar); pintar();
-  acc.querySelector('.si').onclick=async()=>{est.textContent=tr('sending');if(await enviar('sec_'+k,'aprobado',''))pintar();else est.textContent=tr('fail')};
-  acc.querySelector('.com').onclick=()=>{caja.hidden=!caja.hidden;if(!caja.hidden)ta.focus()};
-  caja.querySelector('.env').onclick=async()=>{const t=ta.value.trim();if(!t){ta.focus();return}est.textContent=tr('sending');if(await enviar('sec_'+k,'nota',t)){pintar();caja.hidden=true}else est.textContent=tr('fail')};
-});
-
-// preguntas
-const PREG=[
-  ['q_gratis',{es:['¿El registro al tryout sigue siendo gratis? ¿Se puede decir en la página?','Si es gratis, el botón y el titular lo dirían ("Apply for a free tryout").'],
-               en:['Is the tryout registration still free? Can the page say so?','If it is free, the button and the headline would say so ("Apply for a free tryout").']}],
-  ['q_fechas',{es:['¿Hay fechas, o al menos semanas, de los tryouts de mayo de 2027? ¿En qué sedes?','Con eso se llena la tabla de fechas. Mientras tanto queda "Dates coming soon".'],
-               en:['Are there dates, or at least weeks, for the May 2027 tryouts? At which locations?','That fills in the dates table. Meanwhile it says "Dates coming soon".']}],
-  ['q_edades',{es:['¿Qué años de nacimiento entran por categoría para 2027-28, en niños y en niñas?','Va en la tabla y en las preguntas frecuentes.'],
-               en:['Which birth years go in each age group for 2027-28, for boys and for girls?','It goes in the table and in the FAQ.']}],
-  ['q_cifras',{es:['¿Se aprueban las cuatro cifras de la franja amarilla?','MLS NEXT desde 2023-24, 12 equipos MLS NEXT en 2026-27, Top 8 nacional dos temporadas seguidas y 6 jugadores firmados por academias profesionales en 2026.'],
-               en:['Are the four figures in the yellow strip approved?','MLS NEXT since 2023-24, 12 MLS NEXT teams in 2026-27, Top 8 nationally two seasons in a row and 6 players signed by pro academies in 2026.']}],
-  ['q_sponsors',{es:['¿Qué sponsors siguen en 2026-27, además de Westime?','Hoy aparecen Pura Vida Miami, Mia Cucina, St. Regis, IMECA y Spinex (Spinex ya sale).'],
-                 en:['Which sponsors remain in 2026-27, besides Westime?','The page shows Pura Vida Miami, Mia Cucina, St. Regis, IMECA and Spinex today (Spinex is already removed).']}],
-  ['q_relacion',{es:['¿Cómo se dice la relación con Juventus Academy Miami?','Propuesta: "Athletum FC is the competitive and MLS NEXT program of the Juventus Academy Miami family." Reemplaza "for over 15 years" y "most prestigious academies".'],
-                 en:['How should the relationship with Juventus Academy Miami be described?','Proposal: "Athletum FC is the competitive and MLS NEXT program of the Juventus Academy Miami family." It replaces "for over 15 years" and "most prestigious academies".']}],
-  ['q_sedes',{es:['¿Siguen las 6 sedes? ¿Cuál es la dirección de Ruben Dario Park?','Downtown Miami, Doral, Cutler Bay, Miramar, Davie y Fontainebleau.'],
-              en:['Are the 6 locations still active? What is the address of Ruben Dario Park?','Downtown Miami, Doral, Cutler Bay, Miramar, Davie and Fontainebleau.']}],
-  ['q_upsl',{es:['¿Se mantiene UPSL en el menú del sitio?','Es de adultos y no forma parte del camino juvenil.'],
-             en:['Should UPSL stay in the site menu?','It is an adult league and is not part of the youth pathway.']}],
-  ['q_pathway',{es:['¿Opción A (escalera) u opción B (arco) para el Pathway?','Se pueden comparar con los botones de la barra de arriba.'],
-                en:['Option A (stairs) or option B (arch) for the Pathway?','Compare them with the buttons in the top bar.']}]
-];
-const cont=document.getElementById('preguntas'), s0=LS.get();
-PREG.forEach(([k,txt])=>{
-  const d=document.createElement('div'); d.className='preg';
-  d.innerHTML=`<label for="t-${k}"></label><p class="ctx"></p><textarea id="t-${k}" rows="2"></textarea><button type="button"></button><span class="est" role="status"></span>`;
-  cont.appendChild(d);
-  const ta=d.querySelector('textarea'), est=d.querySelector('.est'), b=d.querySelector('button');
-  if(s0[k])ta.value=s0[k].comentario||'';
-  const pintar=()=>{d.querySelector('label').textContent=txt[L][0];d.querySelector('.ctx').textContent=txt[L][1];b.textContent=tr('send');const r=LS.get()[k];if(r)est.textContent=tr('okSent')+' · '+hora(r.hora)};
-  pintores.push(pintar); pintar();
-  b.onclick=async()=>{const t=ta.value.trim();if(!t){ta.focus();return}est.textContent=tr('sending');if(await enviar(k,'respuesta',t))pintar();else est.textContent=tr('fail')};
-});
-
-// visto bueno general
-const eg=document.getElementById('e-general'), tg=document.getElementById('t-general');
-if(s0.general)tg.value=s0.general.comentario||'';
-const pintarG=()=>{tg.placeholder=tg.dataset['ph'+(L==='en'?'En':'Es')];const r=LS.get().general;if(r)eg.textContent=(r.tipo==='aprobado'?tr('okApproved'):tr('okChanges'))+' · '+hora(r.hora)};
-pintores.push(pintarG); pintarG();
-document.getElementById('b-aprobar').onclick=async()=>{eg.textContent=tr('sending');if(await enviar('general','aprobado',tg.value.trim()))pintarG();else eg.textContent=tr('fail')};
-document.getElementById('b-cambios').onclick=async()=>{const t=tg.value.trim();if(!t){tg.focus();tg.placeholder=tr('writeChanges');return}eg.textContent=tr('sending');if(await enviar('general','nota',t))pintarG();else eg.textContent=tr('fail')};
-
-// barra: idioma, notas y opción de pathway
-const bn=document.getElementById('b-notas'), bl=document.getElementById('b-lang');
-const pintarBarra=()=>{bn.textContent=bn.getAttribute('aria-pressed')==='true'?tr('notesOn'):tr('notesOff');bl.textContent=tr('btnLang');bl.setAttribute('aria-label',L==='en'?'Cambiar a español':'Switch to English')};
-function idioma(l){L=l;document.documentElement.dataset.l=l;document.documentElement.lang=l;try{localStorage.setItem(LSL,l)}catch(e){}pintores.forEach(f=>f());pintarBarra()}
-bl.onclick=()=>idioma(L==='en'?'es':'en');
-bn.onclick=()=>{const on=bn.getAttribute('aria-pressed')!=='true';bn.setAttribute('aria-pressed',on);document.body.classList.toggle('sin-notas',!on);pintarBarra()};
-document.querySelectorAll('.b-pw').forEach(b=>b.onclick=()=>{document.querySelectorAll('.b-pw').forEach(x=>x.setAttribute('aria-pressed',x===b));document.getElementById('img-pw').src='assets/pathway_'+b.dataset.pw+'.webp?v=1211'});
 document.querySelectorAll('a[href="#apply"]').forEach(a=>a.addEventListener('click',e=>{if(a.id!=='apply'){e.preventDefault();document.getElementById('s-hero').scrollIntoView()}}));
-idioma(new URLSearchParams(location.search).get('lang')==='en'?'en':L);
-
 </script>
 </body>
 </html>
