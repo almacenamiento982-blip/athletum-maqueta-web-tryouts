@@ -260,3 +260,5 @@ tr:last-child td{border-bottom:none}
 .gfx img{position:absolute;right:-28%;bottom:-6%;width:120%;max-width:none;height:auto!important;opacity:.13;filter:brightness(0)}
 .gfx small{position:absolute;left:16px;top:14px;z-index:1;font:700 11px var(--body);letter-spacing:.2em;text-transform:uppercase}
 @media(max-width:699px){.cards .card .im{aspect-ratio:5/4}.news .card .im{aspect-ratio:4/3}}
+.hero .ph img{-webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 42%,#000 58%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 42%,#000 58%,transparent 100%)}
+.hero .ph img[src*="hero.webp"]{-webkit-mask-image:none;mask-image:none}
