@@ -4,238 +4,140 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Athletum FC Tryouts</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--amarillo:#FFF200;--negro:#0b0b0b;--gris:#1a1a1a}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--negro);color:#fff;font:15px/1.55 Montserrat,system-ui,sans-serif}
-img{max-width:100%;display:block}
-a{color:inherit}
-h1,h2,h3{font-family:Oswald,Impact,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.01em;line-height:1.1}
-
-.m{max-width:1200px;margin:0 auto;background:var(--negro)}
-.cab{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-bottom:1px solid #222}
-.cab img{height:54px;width:auto}
-.cab nav{display:none;gap:22px;font-size:12px;font-weight:600;letter-spacing:.08em}
-@media(min-width:900px){.cab nav{display:flex}}
-.cab nav span.act{color:var(--amarillo)}
-.btn{display:inline-block;background:var(--amarillo);color:#000;font:700 15px Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:15px 26px;border-radius:4px;border:0;cursor:pointer}
-.btn.chico{padding:10px 16px;font-size:12.5px}
-.btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
-
-.hero{display:grid;grid-template-columns:1fr;align-items:center}
-@media(min-width:900px){.hero{grid-template-columns:1fr 1fr}}
-.hero .txt{padding:40px 24px}
-.hero h1{font-size:clamp(40px,7vw,68px);margin:0 0 6px;line-height:1}
-.hero h1 em{font-style:normal;color:var(--amarillo);display:block;font-size:.55em;margin-top:8px}
-.hero p{color:#cfcfcf;max-width:460px;margin:14px 0 24px}
-.hero .fino{font-size:12.5px;color:#9a9a9a;margin-top:12px}
-.hero > img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
-.afil{display:flex;gap:18px;align-items:center;margin-top:26px}
-.afil img{height:42px;width:auto}
-
-.cifras{display:grid;grid-template-columns:repeat(2,1fr);background:var(--amarillo);color:#000}
-@media(min-width:900px){.cifras{grid-template-columns:repeat(4,1fr)}}
-.cifras div{padding:22px 18px;border-right:1px solid rgba(0,0,0,.12);border-bottom:1px solid rgba(0,0,0,.12)}
-.cifras b{display:block;font:700 36px Oswald,sans-serif;line-height:1}
-.cifras span{font-size:12.5px;font-weight:600}
-
-section{padding:52px 24px}
-section h2{font-size:clamp(30px,4.6vw,46px);margin:0 0 10px}
-section h2 em{font-style:normal;color:var(--amarillo)}
-.sub{color:#bdbdbd;margin:0 0 26px;max-width:640px}
-.claro{background:#fff;color:#111}
-.claro .sub{color:#555}
-.claro h2 em{color:#111;background:var(--amarillo);padding:0 6px}
-
-.dos{display:grid;gap:28px;align-items:center}
-@media(min-width:900px){.dos{grid-template-columns:.85fr 1.15fr}}
-.foto{border-radius:8px;overflow:hidden;aspect-ratio:4/5}
-.foto img{width:100%;height:100%;object-fit:cover}
-@media(max-width:899px){.dos .foto{max-width:420px;width:100%;margin:0 auto}}
-
-.pasos{list-style:none;padding:0;margin:0;display:grid;gap:10px;counter-reset:p}
-.pasos li{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;background:var(--gris);border-radius:8px;padding:14px}
-.claro .pasos li{background:#f3f3f3}
-.pasos li::before{counter-increment:p;content:counter(p);font:700 26px Oswald,sans-serif;color:#000;background:var(--amarillo);border-radius:6px;text-align:center;line-height:44px;height:44px}
-.pasos b{display:block;font:700 17px Oswald,sans-serif;text-transform:uppercase;letter-spacing:.02em}
-.pasos span{font-size:13.5px;color:#bdbdbd}
-.claro .pasos span{color:#555}
-.logos-fila{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:8px}
-.logos-fila img{height:28px;width:auto;background:#fff;border-radius:4px;padding:2px 4px}
-.btn-ig{display:block;width:max-content;max-width:100%;margin:22px auto 0;text-align:center;background:linear-gradient(90deg,#833ab4,#e1306c,#f77737);color:#fff}
-
-.galeria{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(210px,26%);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
-@media(max-width:899px){.galeria{grid-auto-columns:68%}}
-.galeria figure{margin:0;scroll-snap-align:start;border-radius:8px;overflow:hidden;aspect-ratio:4/5;background:#111}
-.galeria img{width:100%;height:100%;object-fit:cover}
-.galeria:focus-visible{outline:2px solid var(--amarillo);outline-offset:4px}
-
-.fecha{border:2px solid var(--amarillo);border-radius:10px;padding:26px 20px;text-align:center;max-width:680px;margin:0 auto}
-.fecha h3{font-size:clamp(26px,4vw,36px);margin:0;color:var(--amarillo)}
-.fecha p{margin:10px 0 20px;color:#ddd}
-.tabla-scroll{overflow-x:auto}
-.tabla{width:100%;border-collapse:collapse;margin:22px 0 0;font-size:13.5px;text-align:left}
-.tabla th,.tabla td{border-bottom:1px solid #2a2a2a;padding:9px 6px}
-.tabla th{color:var(--amarillo);font:600 12px Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase}
-.sedes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.sede{border:1px solid #e2e2e2;border-radius:8px;padding:16px;background:#fafafa}
-.sede b{font:700 19px Oswald,sans-serif;text-transform:uppercase;display:block}
-.sede span{font-size:13px;color:#555}
-.tener{display:grid;gap:12px;padding:0;margin:0;list-style:none;max-width:760px}
-.tener li{padding-left:28px;position:relative}
-.tener li::before{content:"";position:absolute;left:0;top:5px;width:14px;height:14px;background:var(--amarillo);border-radius:3px}
-details{background:var(--gris);border-radius:8px;padding:14px 16px;margin-bottom:8px;max-width:820px}
-summary{cursor:pointer;font-weight:700}
-details p{margin:10px 0 0;color:#cfcfcf;font-size:14px}
-.sponsors{display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:center;background:var(--gris);border:1px solid #2a2a2a;border-radius:8px;padding:24px}
-.sponsors img{height:110px;width:auto}
-.final{text-align:center;background:var(--amarillo);color:#000}
-.final h2 em{color:#000;text-decoration:underline}
-.final .btn{background:#000;color:var(--amarillo)}
-.pie{padding:24px;font-size:12.5px;color:#9a9a9a;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;border-top:1px solid #222}
-.fija{position:sticky;bottom:0;background:rgba(11,11,11,.96);padding:10px 16px;display:flex;justify-content:center;border-top:1px solid #333;z-index:20}
-.fija .btn{width:100%;text-align:center}
-@media(min-width:900px){.fija{display:none}}
-</style>
+<title>Athletum FC · Miami</title>
+<meta name="description" content="Athletum FC: MLS NEXT and competitive soccer for boys and girls in Miami. Part of the Juventus Academy Miami family.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="assets/img/escudo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;700&family=Six+Caps&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=1311">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<main class="m">
+<a class="sr" href="#main">Skip to content</a>
+<header class="hdr"><div class="w">
+  <a class="logo" href="" aria-label="Athletum FC home"><img src="assets/img/escudo.webp" alt="" width="145" height="240"><span>Athletum FC<small>Miami · MLS NEXT</small></span></a>
+  <nav class="nav" aria-label="Main"><a href="club/">Club</a><a href="programs/">Programs</a><a href="mls-next/">MLS NEXT</a><a href="tryouts/">Tryouts</a><a href="locations/">Locations</a><a href="contact/">Contact</a></nav>
+  <a class="btn sm" href="tryouts/#apply">Apply</a>
+  <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+</div></header>
+<nav class="menu" id="menu" aria-label="Mobile"><a href="" aria-current=page>Home</a><a href="club/">Club</a><a href="programs/">Programs</a><a href="mls-next/">MLS NEXT</a><a href="tryouts/">Tryouts</a><a href="locations/">Locations</a><a href="contact/">Contact</a><a class="btn" href="tryouts/#apply">Apply for a tryout</a></nav>
+<main id="main">
 
-  <div class="cab">
-    <img src="assets/logo_athletum.webp" alt="Athletum FC" width="178" height="300">
-    <nav aria-label="Main menu"><span>HOME</span><span>PROGRAMS</span><span>MLS NEXT</span><span class="act">TRYOUTS</span><span>CONTACT</span></nav>
-    <a class="btn chico" href="#apply">Apply</a>
+<section class="hero">
+  <div class="big" aria-hidden="true">ATHLETUM</div>
+  <div class="w">
+    <div>
+      <p class="eyebrow">MLS NEXT · Miami, Florida</p>
+      <h1 class="h1">Built in Miami. <em>Made for the next level.</em></h1>
+      <p class="lead">Athletum FC is the competitive and MLS NEXT club of the Juventus Academy Miami family. One pathway for boys and girls, from their first competitive team to college and the pros.</p>
+      <div class="ctas"><a class="btn" href="tryouts/#apply">Apply for a tryout <span class="arr">→</span></a><a class="btn ghost" href="programs/">Explore programs</a></div>
+      <div class="badges"><img src="assets/logo_jam.webp" alt="Juventus Academy Miami" width="593" height="300"><span class="sep"></span><img src="assets/logo_mlsnext.webp" alt="MLS NEXT" width="208" height="164"><span>Member club<br>since 2023</span></div>
+    </div>
+    <div class="ph"><img src="assets/img/md_2247-720.webp" srcset="assets/img/md_2247-720.webp 720w, assets/img/md_2247-1400.webp 1400w" sizes="(min-width:900px) 520px, 86vw" width="3606" height="5447" alt="Three Athletum players in the 2026-27 white and gold kit" style="object-position:50% 0%" fetchpriority="high"></div>
   </div>
+</section>
+<div class="mq" aria-hidden="true"><div><b>MLS NEXT</b><i>/</i><b>Homegrown</b><i>/</i><b>Academy</b><i>/</i><b>Boys &amp; Girls</b><i>/</i><b>Miami</b><i>/</i><b>Juventus Academy Miami family</b><i>/</i><b>MLS NEXT</b><i>/</i><b>Homegrown</b><i>/</i><b>Academy</b><i>/</i><b>Boys &amp; Girls</b><i>/</i><b>Miami</b><i>/</i><b>Juventus Academy Miami family</b><i>/</i><b>MLS NEXT</b><i>/</i><b>Homegrown</b><i>/</i><b>Academy</b><i>/</i><b>Boys &amp; Girls</b><i>/</i><b>Miami</b><i>/</i><b>Juventus Academy Miami family</b><i>/</i><b>MLS NEXT</b><i>/</i><b>Homegrown</b><i>/</i><b>Academy</b><i>/</i><b>Boys &amp; Girls</b><i>/</i><b>Miami</b><i>/</i><b>Juventus Academy Miami family</b><i>/</i></div></div>
 
-  <div class="hero" id="s-hero">
-    <div class="txt">
-      <h1>Athletum Tryouts <em>Boys and girls · Miami</em></h1>
-      <p>MLS NEXT and competitive teams for boys and girls in Miami. Apply once and we will contact you with your age group's tryout date and location.</p>
-      <a class="btn" id="apply" href="#apply">Apply for a tryout</a>
-      <div class="fino">Registration on PlayMetrics</div>
-      <div class="afil"><img src="assets/logo_jam.webp" alt="Juventus Academy Miami" width="593" height="300"><img src="assets/logo_mlsnext.webp" alt="MLS NEXT" width="208" height="164"></div>
-    </div>
-    <img src="assets/hero.webp?v=1212" alt="Three Athletum players in the 2026-27 white and gold kit: Your next level starts here" width="800" height="1000" fetchpriority="high">
+<section class="sec"><div class="w">
+  <div class="head split rv"><div><p class="eyebrow">The club in numbers</p><h2 class="h2">Results <em>speak.</em></h2></div>
+  <p class="lead">Three teams in the 2025-26 MLS NEXT Cup, the U15 Academy team league champions and two U15 teams in the national Top 8.</p></div>
+  <div class="stats rv">
+  <div class="stat"><b>2023</b><span>in MLS NEXT since the 2023-24 season</span></div>
+  <div class="stat"><b>12</b><span>MLS NEXT teams in 2026-27 · Homegrown and Academy</span></div>
+  <div class="stat"><b>Top 8</b><span>in the nation, two seasons in a row</span></div>
+  <div class="stat"><b>6</b><span>players signed by pro academies in 2026</span></div>
+</div>
+</div></section>
+
+<section class="sec coal"><div class="w">
+  <div class="head split rv"><div><p class="eyebrow">Player pathway</p><h2 class="h2">One club. <em>The whole pathway.</em></h2></div>
+  <p class="lead">Every player is placed at the level that fits them, and moves up as they grow. The pathway does not end at 19.</p></div>
+  <div class="path rv">
+  <div class="step"><h3>Pre-Academy</h3><p>Juventus Academy Miami methodology for the youngest players.</p></div>
+  <div class="step"><h3>Competitive</h3><p>Division 3, 2, 1 and Elite teams in four Florida leagues.</p><div class="lg"><img src="assets/liga_edp.webp" alt="EDP Florida" width="117" height="160" loading="lazy"><img src="assets/liga_fal.webp" alt="Florida Academy League" loading="lazy"><img src="assets/liga_sfpl.webp" alt="South Florida Premier League" loading="lazy"><img src="assets/liga_nal.webp" alt="National Academy League" loading="lazy"></div></div>
+  <div class="step"><h3>MLS NEXT · Juventus Residency</h3><p>Academy and Homegrown divisions against the top academies in the country, or a season training in Italy.</p></div>
+  <div class="step"><h3>MLS NEXT Pro</h3><p>The professional development league: the bridge between the academy and the pros.</p></div>
+  <div class="step"><h3>College · Pro</h3><p>College soccer (NCAA, NJCAA, NAIA) and professional soccer around the world.</p></div>
+</div>
+</div></section>
+
+<section class="sec"><div class="w">
+  <div class="head split rv"><div><p class="eyebrow">Programs</p><h2 class="h2">Find your <em>level.</em></h2></div>
+  <p class="lead">From first touches to the national stage. Every program follows the same methodology and the same standards.</p></div>
+  <div class="cards c4">
+    <a class="card rv" href="programs/#mlsnext"><div class="im"><img src="assets/img/md_1784-720.webp" srcset="assets/img/md_1784-720.webp 720w, assets/img/md_1784-1400.webp 1400w" sizes="(min-width:1060px) 300px, (min-width:700px) 50vw, 100vw" width="3744" height="5616" alt="Athletum MLS NEXT player pointing at the camera with a ball under his arm" style="object-position:50% 18%" loading="lazy" decoding="async"></div><div class="tx"><span class="tag">U13 – U19</span><h3>MLS NEXT</h3><p>Homegrown and Academy divisions. Invitation and ID camp.</p><span class="more">Learn more</span></div></a>
+    <a class="card rv" href="programs/#boys"><div class="im"><img src="assets/img/ig_dribble-720.webp" srcset="assets/img/ig_dribble-720.webp 720w, assets/img/ig_dribble-1400.webp 1400w" sizes="(min-width:1060px) 300px, (min-width:700px) 50vw, 100vw" width="3059" height="3969" alt="Athletum player dribbling during a match" style="object-position:50% 40%" loading="lazy" decoding="async"></div><div class="tx"><span class="tag">U7 – U19</span><h3>Boys competitive</h3><p>Division 3, 2, 1 and Elite. Tryout required.</p><span class="more">Learn more</span></div></a>
+    <a class="card rv" href="programs/#girls"><div class="im"><div class="gfx" style="width:100%;height:100%"><small>Athletum FC</small><img src="assets/img/toro.webp" alt="" width="1000" height="573" loading="lazy"><div><b>GIRLS</b><span>Doral · Cutler Bay</span></div></div></div><div class="tx"><span class="tag">U8 – U16</span><h3>Girls competitive</h3><p>Girls teams in Doral and Cutler Bay. Tryout required.</p><span class="more">Learn more</span></div></a>
+    <a class="card rv" href="programs/#preacademy"><div class="im"><img src="assets/img/md_3138-720.webp" srcset="assets/img/md_3138-720.webp 720w, assets/img/md_3138-1400.webp 1400w" sizes="(min-width:1060px) 300px, (min-width:700px) 50vw, 100vw" width="3744" height="5616" alt="Young Athletum player smiling in the 2026-27 kit" style="object-position:50% 15%" loading="lazy" decoding="async"></div><div class="tx"><span class="tag">U3 – U16</span><h3>Pre-Academy</h3><p>Juventus Academy Miami methodology. No tryout needed.</p><span class="more">Learn more</span></div></a>
   </div>
+</div></section>
 
-  <div class="cifras" id="s-cifras">
-    <div><b>2023</b><span>in MLS NEXT since the 2023-24 season</span></div>
-    <div><b>12</b><span>MLS NEXT teams in 2026-27</span></div>
-    <div><b>Top 8</b><span>nationally, two seasons in a row</span></div>
-    <div><b>6</b><span>players signed by pro academies in 2026</span></div>
+<section class="band" aria-labelledby="h-italy">
+  <img src="assets/img/it_run-720.webp" srcset="assets/img/it_run-720.webp 720w, assets/img/it_run-1400.webp 1400w" sizes="100vw" width="2000" height="1333" alt="Athletum players warming up in Italy in front of a giant Juventus sign" style="object-position:50% 40%" loading="lazy" decoding="async">
+  <div class="w"><div style="max-width:560px" class="rv">
+    <p class="eyebrow">Juventus Academy Miami family</p>
+    <h2 class="h2" id="h-italy">From Miami <em>to Italy.</em></h2>
+    <p class="lead">Our values are the same as the Juventus first team. In March 2026, 33 Athletum players traveled to Italy to train and play against Italian academies.</p>
+    <a class="btn" href="club/#italy">The Juventus connection <span class="arr">→</span></a>
+  </div></div>
+</section>
+
+<section class="sec paper"><div class="w">
+  <div class="split2">
+    <div class="rv">
+      <p class="eyebrow">Next level</p>
+      <h2 class="h2">Where our <em>players go.</em></h2>
+      <p class="lead">In 2026 alone, six Athletum players signed with professional academies. College soccer is part of the same plan.</p>
+      <div class="chips" style="margin:26px 0 30px"><span class="chip"><b>×3</b> Inter Miami CF Academy</span><span class="chip">LA Galaxy Academy</span><span class="chip">Nashville SC Academy</span><span class="chip">AS Roma · via Juventus Residency</span></div>
+      <a class="btn dark" href="mls-next/">Our MLS NEXT program <span class="arr">→</span></a>
+    </div>
+    <div class="offset rv"><div class="frame"><img src="assets/img/md_2089-720.webp" srcset="assets/img/md_2089-720.webp 720w, assets/img/md_2089-1400.webp 1400w" sizes="(min-width:900px) 560px, 100vw" width="3744" height="5616" alt="Athletum player in profile holding a ball" style="object-position:50% 20%" loading="lazy" decoding="async"></div></div>
   </div>
+</div></section>
 
-  <section id="s-pathway">
-    <h2>One club. <em>The whole pathway.</em></h2>
-    <p class="sub">From the Pre-Academy to MLS NEXT, and then on to college or the pros. Every player is placed at the level that fits them after the tryout.</p>
-    <div class="dos">
-      <div class="foto"><img src="assets/md_01784.webp?v=1212" alt="Athletum player in the 2026-27 kit pointing at the camera with a ball under his arm" width="640" height="800" loading="lazy"></div>
-      <ol class="pasos">
-        <li><div><b>Pre-Academy</b><span>Juventus Academy Miami methodology for the youngest players.</span></div></li>
-        <li><div><b>Competitive</b><span>League play in EDP Florida, Florida Academy League, South Florida Premier League and National Academy League.</span>
-          <div class="logos-fila"><img src="assets/liga_edp.webp" alt="EDP Florida"><img src="assets/liga_fal.webp" alt="Florida Academy League"><img src="assets/liga_sfpl.webp" alt="South Florida Premier League"><img src="assets/liga_nal.webp" alt="National Academy League"></div></div></li>
-        <li><div><b>MLS NEXT · Juventus Residency</b><span>MLS NEXT Homegrown and Academy divisions against the top academies in the country, or a full season training in Italy with Juventus Residency.</span></div></li>
-        <li><div><b>MLS NEXT Pro</b><span>The professional development league, the bridge between the academy and the pros.</span></div></li>
-        <li><div><b>College · Pro</b><span>College soccer (NCAA, NJCAA, NAIA) and pro or semi-pro soccer around the world.</span></div></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="claro" id="s-como">
-    <div class="dos">
-      <div class="foto"><img src="assets/md_02089.webp?v=1212" alt="Athletum player in profile holding a ball" width="640" height="800" loading="lazy"></div>
-      <div>
-        <h2>How it <em>works</em></h2>
-        <ol class="pasos">
-          <li><div><b>Apply</b><span>Create your PlayMetrics account and register for the tryout.</span></div></li>
-          <li><div><b>Get your date</b><span>You will receive a confirmation email with your age group's date, time and location.</span></div></li>
-          <li><div><b>Receive your invitation</b><span>After the tryout, allow a few days to a week to receive your invitation letter.</span></div></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <section id="s-jugadores">
-    <h2>This is <em>Athletum</em></h2>
-    <p class="sub">Our players in the 2026-27 kit.</p>
-    <div class="galeria" tabindex="0" aria-label="Athletum players photo gallery, scroll sideways">
-      <figure><img src="assets/md_01284.webp?v=1212" alt="Athletum player pointing at the camera" width="640" height="800" loading="lazy"></figure>
-      <figure><img src="assets/md_01480.webp?v=1212" alt="Athletum player seated with a ball" width="640" height="800" loading="lazy"></figure>
-      <figure><img src="assets/md_01633.webp?v=1212" alt="Athletum goalkeeper holding a ball" width="640" height="800" loading="lazy"></figure>
-      <figure><img src="assets/md_03267.webp?v=1212" alt="Athletum player standing in the 2026-27 kit" width="640" height="800" loading="lazy"></figure>
-      <figure><img src="assets/md_01422.webp?v=1212" alt="Athletum player seated holding a ball" width="640" height="800" loading="lazy"></figure>
-    </div>
-    <a class="btn btn-ig" href="https://www.instagram.com/athletum_fc/" target="_blank" rel="noopener">Follow us on Instagram · @athletum_fc</a>
-  </section>
-
-  <section id="s-fechas">
-    <div class="fecha">
-      <h3>Official tryouts · May 2027</h3>
-      <p>Dates and locations are coming soon. Apply now and we will contact you with your age group's date and time.</p>
-      <a class="btn" href="#apply">Apply for a tryout</a>
-      <div class="tabla-scroll"><table class="tabla">
-        <tr><th>Age group</th><th>Location</th><th>Date and time</th></tr>
-        <tr><td>To be confirmed</td><td>To be confirmed</td><td>To be confirmed</td></tr>
-      </table></div>
-    </div>
-  </section>
-
-  <section class="claro" id="s-sedes">
-    <h2>Locations</h2>
-    <div class="sedes">
-      <div class="sede"><b>Downtown Miami</b><span>Dorsey Park · 1701 NW 1st Ave, Miami, FL</span></div>
-      <div class="sede"><b>Doral</b><span>Doral Legacy Park · 11400 NW 82nd St, Doral, FL 33178</span></div>
-      <div class="sede"><b>Cutler Bay</b><span>Mater Bay Academy · 22025 SW 87th Ave, Cutler Bay, FL 33190</span></div>
-      <div class="sede"><b>Miramar</b><span>Miramar Regional Park · 16801 Miramar Pkwy, Miramar, FL 33027</span></div>
-      <div class="sede"><b>Davie</b><span>David Posnack JCC · 5850 S Pine Island Rd, Davie, FL 33328</span></div>
-      <div class="sede"><b>Fontainebleau</b><span>Ruben Dario Park</span></div>
-    </div>
-  </section>
-
-  <section id="s-tener">
-    <div class="dos">
-      <div class="foto"><img src="assets/md_01792.webp?v=1212" alt="Athletum player seated with a ball" width="640" height="800" loading="lazy"></div>
-      <div>
-        <h2>Please <em>keep in mind</em></h2>
-        <ul class="tener">
-          <li>Players must wear a white or black jersey on the day of the tryout.</li>
-          <li>Arrive 30 minutes early to check in. Bibs with numbers will be provided.</li>
-          <li>To secure a spot for next season, register and pay as soon as possible after receiving your invitation.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="s-faq">
-    <h2>FAQ</h2>
-    <details><summary>Who can try out?</summary><p>Boys and girls. Each age group has its own date and time.</p></details>
-    <details><summary>When are the tryouts?</summary><p>The official tryouts are in May 2027. Apply now and we will contact you with the date and location for your age group.</p></details>
-    <details><summary>What should my child bring?</summary><p>A white or black jersey, cleats, shin guards and water. Please arrive 30 minutes early to check in.</p></details>
-    <details><summary>What happens after the tryout?</summary><p>You will receive an invitation letter within a few days to a week with the team and level for your player.</p></details>
-    <details><summary>Is Athletum part of Juventus Academy Miami?</summary><p>Athletum FC is the competitive and MLS NEXT program of the Juventus Academy Miami family.</p></details>
-  </section>
-
-  <section class="final" id="s-final">
-    <h2>Ready for <em>your next level?</em></h2>
-    <p style="margin:0 0 20px">Apply today. It only takes a few minutes.</p>
-    <a class="btn" href="#apply">Apply for a tryout</a>
-  </section>
-
-  <div class="pie">
-    <span>© 2026 Athletum FC</span>
-    <span>(786) 459-3464 · info@athletumfc.com</span>
-    <span><a href="https://www.instagram.com/athletum_fc/" target="_blank" rel="noopener">Instagram @athletum_fc</a> · TikTok · YouTube</span>
+<section class="sec"><div class="w">
+  <div class="head split rv"><div><p class="eyebrow">Season 2026-27</p><h2 class="h2">This is <em>Athletum.</em></h2></div>
+  <p class="lead">Our players in the new white and gold kit.</p></div>
+  <div class="wall rv">
+    <figure><img src="assets/img/md_1284-720.webp" srcset="assets/img/md_1284-720.webp 720w, assets/img/md_1284-1400.webp 1400w" sizes="(min-width:900px) 420px, 100vw" width="3744" height="5616" alt="Athletum player pointing at the camera" style="object-position:50% 20%" loading="lazy" decoding="async"></figure>
+    <figure><img src="assets/img/md_1383-720.webp" srcset="assets/img/md_1383-720.webp 720w, assets/img/md_1383-1400.webp 1400w" sizes="(min-width:900px) 200px, 50vw" width="3744" height="5616" alt="Athletum player with arms crossed" style="object-position:50% 20%" loading="lazy" decoding="async"></figure>
+    <figure><img src="assets/img/md_1633-720.webp" srcset="assets/img/md_1633-720.webp 720w, assets/img/md_1633-1400.webp 1400w" sizes="(min-width:900px) 200px, 50vw" width="3744" height="5616" alt="Athletum goalkeeper catching a ball" style="object-position:40% 25%" loading="lazy" decoding="async"></figure>
+    <figure><img src="assets/img/md_1480-720.webp" srcset="assets/img/md_1480-720.webp 720w, assets/img/md_1480-1400.webp 1400w" sizes="(min-width:900px) 200px, 50vw" width="3744" height="5616" alt="Athletum player seated with a ball" style="object-position:50% 30%" loading="lazy" decoding="async"></figure>
+    <figure><img src="assets/img/md_3378-720.webp" srcset="assets/img/md_3378-720.webp 720w, assets/img/md_3378-1400.webp 1400w" sizes="(min-width:900px) 200px, 50vw" width="3744" height="5616" alt="Athletum player holding his boots" style="object-position:50% 20%" loading="lazy" decoding="async"></figure>
+    <figure><img src="assets/img/md_1468-720.webp" srcset="assets/img/md_1468-720.webp 720w, assets/img/md_1468-1400.webp 1400w" sizes="(min-width:900px) 200px, 50vw" width="3744" height="5616" alt="Athletum player in an action pose" style="object-position:50% 20%" loading="lazy" decoding="async"></figure>
+    <figure><img src="assets/img/md_4099-720.webp" srcset="assets/img/md_4099-720.webp 720w, assets/img/md_4099-1400.webp 1400w" sizes="(min-width:900px) 200px, 50vw" width="3744" height="5616" alt="Athletum goalkeeper seated with a ball" style="object-position:50% 30%" loading="lazy" decoding="async"></figure>
+    <figure><img src="assets/img/md_1422-720.webp" srcset="assets/img/md_1422-720.webp 720w, assets/img/md_1422-1400.webp 1400w" sizes="(min-width:900px) 200px, 50vw" width="3744" height="5616" alt="Athletum player seated holding a ball" style="object-position:50% 25%" loading="lazy" decoding="async"></figure>
+    <figure><img src="assets/img/md_3267-720.webp" srcset="assets/img/md_3267-720.webp 720w, assets/img/md_3267-1400.webp 1400w" sizes="(min-width:900px) 200px, 50vw" width="3744" height="5616" alt="Athletum player standing in the 2026-27 kit" style="object-position:50% 18%" loading="lazy" decoding="async"></figure>
   </div>
+  <a class="btn ig" href="https://www.instagram.com/athletum_fc/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.8a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg> Follow us on Instagram · @athletum_fc</a>
+</div></section>
 
-  <div class="fija"><a class="btn" href="#apply">Apply for a tryout</a></div>
+<section class="sec coal news"><div class="w">
+  <div class="head split rv"><div><p class="eyebrow">Latest</p><h2 class="h2">On and off <em>the field.</em></h2></div></div>
+  <div class="cards c3">
+    <article class="card rv"><div class="im"><img src="assets/img/ig_legends-720.webp" srcset="assets/img/ig_legends-720.webp 720w, assets/img/ig_legends-1400.webp 1400w" sizes="(min-width:1060px) 400px, (min-width:700px) 50vw, 100vw" width="2342" height="3123" alt="Athletum team celebrating with the Legends Cup trophy" style="object-position:50% 35%" loading="lazy" decoding="async"></div><div class="tx"><time datetime="2026-11">November 2026</time><h3>Champions and finalists</h3><p>Athletum teams lifted trophies at the Legends Cup Miami and the Tampa Bay Super Cup.</p></div></article>
+    <article class="card rv"><div class="im"><div class="gfx" style="width:100%;height:100%"><small>November 2026</small><img src="assets/img/toro.webp" alt="" width="1000" height="573" loading="lazy"><div><b>3</b><span>Talent ID camp USA</span></div></div></div><div class="tx"><time datetime="2026-11">November 2026</time><h3>Talent ID call-ups</h3><p>Three Athletum players were invited to the Talent ID camp USA in Fort Lauderdale.</p></div></article>
+    <article class="card rv"><div class="im"><img src="assets/img/ig_pink-720.webp" srcset="assets/img/ig_pink-720.webp 720w, assets/img/ig_pink-1400.webp 1400w" sizes="(min-width:1060px) 400px, (min-width:700px) 50vw, 100vw" width="1848" height="2464" alt="Athletum players wearing pink armbands" style="object-position:50% 30%" loading="lazy" decoding="async"></div><div class="tx"><time datetime="2026-10">October 2026</time><h3>October in pink</h3><p>Our players wore pink armbands all month for Breast Cancer Awareness.</p></div></article>
+  </div>
+</div></section>
+<section class="cta"><img class="toro" src="assets/img/toro.webp" alt="" width="1000" height="573" loading="lazy"><div class="w">
+  <div><h2>Ready for<br>your next level?</h2><p>Apply once and we will contact you with the date and location for your age group.</p></div>
+  <div class="ctas"><a class="btn dark" href="tryouts/#apply">Apply for a tryout <span class="arr">→</span></a></div>
+</div></section>
 </main>
-<script>
-document.querySelectorAll('a[href="#apply"]').forEach(a=>a.addEventListener('click',e=>{if(a.id!=='apply'){e.preventDefault();document.getElementById('s-hero').scrollIntoView()}}));
-</script>
+<footer class="ftr"><div class="w">
+  <div class="g">
+    <div><img src="assets/img/escudo.webp" alt="Athletum FC crest" width="145" height="240" loading="lazy">
+      <p>The competitive and MLS NEXT club of the Juventus Academy Miami family. Boys and girls, Miami, Florida.</p>
+      <div class="soc"><a href="https://www.instagram.com/athletum_fc/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.8a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a><a href="https://www.tiktok.com/@athletumfc" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 3c.4 2.1 1.8 3.6 4 3.8v3.1c-1.5 0-2.8-.4-4-1.2v6.1c0 3.4-2.6 5.9-5.9 5.9S4.8 18.3 4.8 15s2.7-5.9 6-5.9c.3 0 .6 0 .9.1v3.2c-.3-.1-.6-.1-.9-.1-1.5 0-2.7 1.2-2.7 2.7s1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7V3h3.1z"/></svg></a><a href="https://www.youtube.com/@athletumfc" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9L15.5 12l-5.8 3.1z"/></svg></a><a href="https://www.facebook.com/athletumfc" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5V13h2.7v8h3.3z"/></svg></a></div></div>
+    <div><h4>Club</h4><ul><li><a href="club/">About Athletum</a></li><li><a href="club/#italy">Juventus &amp; Italy</a></li><li><a href="locations/">Locations</a></li><li><a href="contact/">Contact</a></li></ul></div>
+    <div><h4>Play</h4><ul><li><a href="programs/">Programs</a></li><li><a href="mls-next/">MLS NEXT</a></li><li><a href="programs/#girls">Girls program</a></li><li><a href="tryouts/">Tryouts</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="tel:+17864593464">(786) 459-3464</a></li><li><a href="mailto:info@athletumfc.com">info@athletumfc.com</a></li><li><a href="https://www.instagram.com/athletum_fc/" target="_blank" rel="noopener">@athletum_fc</a></li></ul></div>
+  </div>
+  <div class="bot"><span>© 2026 Athletum FC. All rights reserved.</span><span>Miami, Florida</span></div>
+</div></footer>
+<div class="fix"><a class="btn" href="tryouts/#apply">Apply for a tryout</a></div>
+<script src="assets/site.js?v=1311" defer></script>
 </body>
 </html>
