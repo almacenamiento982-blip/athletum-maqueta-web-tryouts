@@ -262,3 +262,12 @@ tr:last-child td{border-bottom:none}
 @media(max-width:699px){.cards .card .im{aspect-ratio:5/4}.news .card .im{aspect-ratio:4/3}}
 .hero .ph img{-webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 42%,#000 58%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 42%,#000 58%,transparent 100%)}
 .hero .ph img[src*="hero.webp"]{-webkit-mask-image:none;mask-image:none}
+/* ---------- revisión 13-11 (tarde) ---------- */
+.hero .w>div:first-child{padding-bottom:72px}
+.badges{margin-top:40px}
+@media(max-width:899px){.hero .w>div:first-child{padding-bottom:8px}.hero .ph{margin-top:40px}}
+@media(min-width:900px){.wall{grid-auto-rows:calc((min(100vw,1240px) - 100px)/6*1.5)}.wall figure,.wall figure:nth-child(1){aspect-ratio:auto;height:100%}}
+.gfx{padding:44px 16px 20px}
+.band::before{background:linear-gradient(90deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.72) 42%,rgba(0,0,0,.15) 100%)}
+@media(min-width:900px){.scroller.fill{grid-auto-columns:calc((100% - 36px)/4)}}
+.faqw{max-width:900px}
