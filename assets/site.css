@@ -271,3 +271,8 @@ tr:last-child td{border-bottom:none}
 .band::before{background:linear-gradient(90deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.72) 42%,rgba(0,0,0,.15) 100%)}
 @media(min-width:900px){.scroller.fill{grid-auto-columns:calc((100% - 36px)/4)}}
 .faqw{max-width:900px}
+
+.ftr .spn{margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+.ftr .spn-l{display:flex;flex-wrap:wrap;align-items:center;gap:28px 48px}
+.ftr .spn-l img{height:44px;width:auto;margin:0;opacity:.88}
+@media(max-width:600px){.ftr .spn-l{gap:22px 32px}.ftr .spn-l img{height:34px}}
